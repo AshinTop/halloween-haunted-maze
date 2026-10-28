@@ -1,0 +1,8 @@
+{
+  "name": "halloween-haunted-maze",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A first-person Halloween maze adventure, rendered with a Canvas raycaster.",
+  "scripts": {"test": "node --test tests/*.test.js"}
+}
