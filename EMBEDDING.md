@@ -6,7 +6,7 @@ Primary integration: `crazy3d.org`. Its current game-player component uses a des
 
 ```html
 <iframe
-  src="https://ashintop.github.io/halloween-haunted-maze/"
+  src="https://halloween-haunted-maze.crazy3d.org/"
   title="Ghostkeeper Maze 3D"
   width="960"
   height="540"
@@ -16,9 +16,9 @@ Primary integration: `crazy3d.org`. Its current game-player component uses a des
 ></iframe>
 ```
 
-The URL is the intended GitHub Pages deployment target. Confirm deployment before using it in the production catalog.
+The example uses the live Cloudflare game URL. Check the final surrounding host layout when adding it to the production catalog.
 
-The game fills its own `100dvh` and uses relative asset paths, including when served from a GitHub Pages repository subpath. `?embed=1` is optional; compact adaptation is always active. No parent-page access, `postMessage`, pointer lock or WebGL permission is needed.
+The game fills its own `100dvh` and uses relative asset paths, including when served under a subdirectory. `?embed=1` is optional; compact adaptation is always active. No parent-page access, `postMessage`, pointer lock or WebGL permission is needed.
 
 ## Responsive targets
 

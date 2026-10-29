@@ -6,11 +6,11 @@ Ghostkeeper Maze 3D is a cozy first-person Halloween maze game for desktop and m
 
 Part of **Midnight Candy Club**, created for the Halloween collection at [crazy3d.org](https://crazy3d.org).
 
-**[GitHub Pages deployment target](https://ashintop.github.io/halloween-haunted-maze/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
+**[Play online](https://halloween-haunted-maze.crazy3d.org/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
 
-**Deployment status:** GitHub Pages is not live yet. The `ashintop.github.io` links in this document are intended deployment addresses. Use the local-run instructions until the hosted game has been published and verified.
+**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
 
-[Video player and transcript (deployment target)](https://ashintop.github.io/halloween-haunted-maze/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+[Video player and transcript](https://halloween-haunted-maze.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
 
 ![Ghostkeeper Maze 3D Halloween browser game with moonlit stone corridors, a minimap, and touch movement controls](docs/images/gameplay.jpg)
 
@@ -25,7 +25,7 @@ Part of **Midnight Candy Club**, created for the Halloween collection at [crazy3
 - **A shortest-walk target** for each maze, computed from the complete collectible-and-exit route.
 - **Daily mazes by UTC date**, with links that preserve the chosen date.
 - **Touch, mouse and keyboard controls**, English and Simplified Chinese, optional sound, local completion records, and reduced-motion support.
-- **Self-contained static hosting** with no runtime dependencies, account, external textures, or CDN requests.
+- **Self-contained game source** with no runtime dependencies, account, external textures, or CDN dependencies.
 
 ### The 12-night journey
 
@@ -109,7 +109,7 @@ Use the four movement buttons to walk and turn. Check the inventory for three la
 The actual iframe viewport drives the layout. Intended host sizes include **960 × 540**, **390 × 460**, **390 × 300**, and **844 × 340** CSS pixels. The large journal hides in smaller frames while the scene, inventory, map, hint, and four movement buttons remain accessible. See [EMBEDDING.md](EMBEDDING.md).
 
 ```html
-<iframe src="https://ashintop.github.io/halloween-haunted-maze/"
+<iframe src="https://halloween-haunted-maze.crazy3d.org/"
   title="Ghostkeeper Maze 3D" width="960" height="540"
   allow="fullscreen" allowfullscreen
   style="display:block;width:100%;border:0"></iframe>
@@ -137,9 +137,9 @@ Created for Ashin's Midnight Candy Club with AI-assisted game design, programmin
 
 ## More from Midnight Candy Club
 
-- [Ghost Lanterns 3D](https://github.com/AshinTop/halloween-3d) — a three-dimensional Lights Out garden with linked-soul lanterns.
-- [Pumpkin Shift](https://github.com/AshinTop/halloween-pumpkin-shift) — slide numbered tiles through a Halloween puzzle journey.
-- [Moonlit Mirrors](https://github.com/AshinTop/halloween-mirror-hearts) — solve two mirrored ghost paths together.
-- [Midnight Rhythm Parade](https://github.com/AshinTop/halloween-rhythm-parade) — play three original Halloween songs with four little monsters.
+- [Ghost Lanterns 3D](https://halloween-3d.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-3d) — a three-dimensional Lights Out garden with linked-soul lanterns.
+- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) — slide numbered tiles through a Halloween puzzle journey.
+- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) — solve two mirrored ghost paths together.
+- [Midnight Rhythm Parade](https://halloween-rhythm-parade.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-rhythm-parade) — play three original Halloween songs with four little monsters.
 
 If this little maze brightened your night, **[star the repository](https://github.com/AshinTop/halloween-haunted-maze)**. It helps you find the project again and supports future improvements. Reports with a level number, device, browser and reproduction steps are especially helpful.
