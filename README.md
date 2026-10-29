@@ -1,145 +1,113 @@
-# Halloween Maze Game — Ghostkeeper Maze 3D
+[English](README.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md)
 
-**Find three little spirits, borrow a little moonlight, and bring everybody home.**
+# 👻 Ghostkeeper Maze 3D — Cozy Halloween Maze Adventure
 
-Ghostkeeper Maze 3D is a cozy first-person Halloween maze game for desktop and mobile browsers. Explore stone corridors, collect three pumpkin lantern spirits and a brass key, then return everyone through the moon gate. Twelve adventures and a date-based daily maze offer a peaceful exploration challenge, with an optional atlas and a friendly ghost guide whenever you need them.
+**Find three little spirits, borrow some moonlight, and bring everybody home.** Ghostkeeper Maze 3D is a first-person Halloween maze game created for [Crazy 3D](https://crazy3d.org/). Explore stone corridors, gather three pumpkin lantern spirits and a brass key, then open the moon gate. Twelve nights and a daily maze offer quiet exploration with a map and a friendly ghost guide.
 
-Part of **Midnight Candy Club**, created for the Halloween collection at [crazy3d.org](https://crazy3d.org).
+**[Play online](https://halloween-haunted-maze.crazy3d.org/)** · [All Halloween games](https://github.com/AshinTop/halloween-games) · [Embedding guide](EMBEDDING.md) · [Design notes](DESIGN.md)
 
-**[Play online](https://halloween-haunted-maze.crazy3d.org/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
+**Document languages:** English, 简体中文, Español, Português (Brasil), 日本語. **Game interface:** English and Simplified Chinese only; the other README languages do not add in-game translations.
 
-**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
+![Ghostkeeper Maze 3D Halloween adventure with first-person stone corridors, a minimap and movement buttons](docs/images/gameplay.jpg)
 
-[Video player and transcript](https://halloween-haunted-maze.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+## A peaceful night out 🎃
 
-![Ghostkeeper Maze 3D Halloween browser game with moonlit stone corridors, a minimap, and touch movement controls](docs/images/gameplay.jpg)
+- **12 reproducible adventures**, from 7×7 to 15×15 grids, plus a date-based 11×11 daily maze.
+- First-person walls, depth-tested sprites, distance fog, moonlight, and a lantern glow.
+- An exploration map, optional full atlas, and a guide to remaining objectives.
+- Shortest-walk targets, local completion records, optional sound, and reduced-motion support.
+- No enemies, chase scenes, jump scares, timer, or lives.
 
-## A peaceful Halloween adventure
+## How to bring everyone home
 
-- **12 reproducible maze adventures**, growing from a 7 × 7 courtyard to 15 × 15 corridors.
-- **Real first-person perspective**, including depth-tested sprites, textured walls, distance fog, moonlight, and a hand-held lantern glow.
-- **Three lost lantern spirits plus one brass key** to find before the moon gate opens.
-- **A map that unfolds as you explore**, with a full atlas available on demand.
-- **A friendly ghost guide** that finds an actual route to the nearest remaining collectible, then the exit.
-- **No enemies, chase scenes, timer, or lives.** Explore at your own pace.
-- **A shortest-walk target** for each maze, computed from the complete collectible-and-exit route.
-- **Daily mazes by UTC date**, with links that preserve the chosen date.
-- **Touch, mouse and keyboard controls**, English and Simplified Chinese, optional sound, local completion records, and reduced-motion support.
-- **Self-contained game source** with no runtime dependencies, account, external textures, or CDN dependencies.
+Walk onto each pumpkin lantern to rescue its spirit, collect the brass key, and enter the moon gate. All **three spirits and the key** are required. Finding the gate early simply leaves it closed.
 
-### The 12-night journey
+Movement follows the maze grid. Walking to an adjacent open cell counts as one step; turning 90 degrees in place does not. The shortest-walk target includes every collectible and the exit, not just the shortest path to the gate.
 
-| Night | Adventure | Grid | Shortest walk |
-| ---: | --- | --- | ---: |
-| 1 | A Candle at the Gate | 7 × 7 | 16 steps |
-| 2 | The Ivy Courtyard | 9 × 9 | 32 steps |
-| 3 | A Very Shy Ghost | 9 × 9 | 34 steps |
-| 4 | The Copper Passage | 9 × 9 | 40 steps |
-| 5 | Whispers in the Walls | 11 × 11 | 60 steps |
-| 6 | The Violet Stair | 11 × 11 | 54 steps |
-| 7 | Three Little Promises | 11 × 11 | 48 steps |
-| 8 | The Forgotten Garden | 13 × 13 | 94 steps |
-| 9 | Velvet & Moonlight | 13 × 13 | 76 steps |
-| 10 | The Lantern Keeper | 13 × 13 | 84 steps |
-| 11 | A Door Before Dawn | 15 × 15 | 102 steps |
-| 12 | Everybody Home | 15 × 15 | 104 steps |
+| Night | Grid including border walls | Target steps |
+|---|---|---:|
+| 1 | 7×7 | 16 |
+| 2 / 3 / 4 | 9×9 | 32 / 34 / 40 |
+| 5 / 6 / 7 | 11×11 | 60 / 54 / 48 |
+| 8 / 9 / 10 | 13×13 | 94 / 76 / 84 |
+| 11 / 12 | 15×15 | 102 / 104 |
 
-Grid sizes include the surrounding walls. A step means movement into an adjacent walkable cell; turning in place does not add a step. Every listed route collects all three spirits and the key before entering the exit.
-
-## How to play
-
-1. Follow the corridor from the starting gate.
-2. Walk onto each pumpkin lantern to rescue its little ghost. The inventory lights up as you find them.
-3. Pick up the floating brass key.
-4. Once all three spirits and the key are with you, enter the moon gate to complete the night.
-5. Replay for a shorter walk, choose another night, or try the daily maze.
-
-The gate stays closed until all four objectives are complete. Reaching it early does not lose the game.
-
-### Controls
+## Controls
 
 | Action | Keyboard | Touch / mouse |
-| --- | --- | --- |
-| Move forward | **W / ↑** | Forward button |
-| Step backward | **S / ↓** | Back button |
-| Turn left, 90° | **A / ←** | Left-turn button |
-| Turn right, 90° | **D / →** | Right-turn button |
-| Full atlas | **M** | Map button |
-| Ghost guidance | **H** | Ghost button |
-| Level selection, restart, help, share | Standard button navigation | Header buttons |
+|---|---|---|
+| Forward / backward | W or ↑ / S or ↓ | Forward / back buttons |
+| Turn left / right | A or ← / D or → | Turn buttons |
+| Open the atlas | M | Map |
+| Ask the ghost guide | H | Ghost |
+| Select night / restart / share | Tab and Enter | Header buttons |
 
-Hold a movement button to repeat it. The game does not require pointer lock, dragging, or a physical keyboard.
+Hold an on-screen movement button to repeat it. No pointer lock, dragging, or physical keyboard is required.
 
-## Maps, hints, and records
+## Maps, guidance, and records
 
-The small exploration map reveals nearby corridors as you walk. Opening the full atlas records one use of help for that adventure; reopening it does not add another. Each request for the ghost guide adds a help use and reveals a legal route toward the nearest missing objective. The guide disappears when you pick up a collectible.
+The small map reveals nearby corridors as you explore. Opening the full atlas records **one help use** for that adventure; reopening it adds none. Each ghost-guide request adds one help use and finds a legal route to the nearest missing item, then the exit. It is a local navigation aid, not a promise of the globally shortest collection order. The route disappears after a pickup.
 
-Help never prevents completion. Local records prefer fewer help uses and then fewer steps, so a later assisted shortcut does not replace an existing unassisted record. Language, sound preference, completed nights and best walks are saved in the current browser. Storage can be unavailable without blocking play; unfinished positions are not restored after navigation.
+Help never blocks completion. Best records prefer fewer help uses first, then fewer steps. An assisted shortcut therefore cannot overwrite an existing unassisted record. Completed-night records and preferences are saved locally; unfinished positions are not restored.
 
-## How the 3D view works
+Share [night 1](https://halloween-haunted-maze.crazy3d.org/#night=1) through night 12, or an [exact daily date](https://halloween-haunted-maze.crazy3d.org/#daily=2026-10-31). Daily generation uses UTC and preserves the chosen date.
 
-This game uses a **Canvas 2D raycaster**. Rays travel through the maze grid to find wall intersections; wall height and texture position are projected according to distance. Collectibles use camera-space projection and a depth buffer so walls correctly hide objects behind them.
+## FAQ
 
-It is a first-person perspective renderer, **not a WebGL engine**. It is designed to work without GPU WebGL availability and does not reuse a static screenshot or a flat overhead board as the 3D view. The optional atlas is a separate navigation aid.
+**Are the mazes finishable?** The generator creates connected mazes. Tests execute full winning routes for all twelve campaign nights; the daily uses the same connected construction.
 
-## Run locally and test
+**Does the 3D view need WebGL?** The perspective scene uses a **Canvas 2D raycaster**. It projects wall intersections and depth-tested sprites without requiring WebGL.
+
+**Can I explore slowly?** Yes. There is no threat or countdown, and the atlas and guide remain available.
+
+**What about accessibility?** Reduced motion removes camera interpolation and decorative movement. Text, inventory counts, and status messages help, but the visual Canvas world is not a complete screen-reader navigation interface.
+
+## See the game
+
+![Ghostkeeper Maze 3D compact player with corridor view, inventory and four movement controls](docs/images/mobile.jpg)
+
+Actual game interface in a compact browser iframe. This illustrates the layout; it is not a physical-phone performance test.
+
+[Watch the 24-second introduction](https://halloween-haunted-maze.crazy3d.org/intro.html) · [Download the captioned MP4](docs/media/intro.mp4). This silent visual tour is assembled from actual game screenshots, not a continuous gameplay recording. The screenshots and video show captured interface states and may predate later visual refinements.
+
+## Embed it on your site
+
+```html
+<iframe src="https://halloween-haunted-maze.crazy3d.org/"
+  title="Ghostkeeper Maze 3D"
+  style="display:block;width:100%;height:540px;border:0"
+  allow="fullscreen" allowfullscreen></iframe>
+```
+
+Intended windows include 960×540, 390×460, 390×300 and 844×340 CSS pixels. Smaller frames hide the large journal while retaining the scene, inventory, map, guide and movement buttons. Check the actual iframe height, especially in short host players.
+
+The live site uses Cloudflare and is deployed from this GitHub repository. Give the iframe a real height and leave space for the host toolbar. Fullscreen may be provided by the host. See [EMBEDDING.md](EMBEDDING.md) for the integration contract.
+
+## Run locally and check the rules
 
 ```sh
 python3 -m http.server 4173
 ```
 
-Open `http://localhost:4173/`. Use HTTP rather than opening `index.html` as a local file, because the game loads ES modules. There are no dependencies to install and no build step.
+Serve the repository root, then open [http://localhost:4173/](http://localhost:4173/). The game is static: no build or dependency installation is needed. Use HTTP(S), because direct `file://` access can block ES modules. Node.js is required for the tests.
 
 ```sh
 npm test
 ```
 
-The **10 focused tests** cover connectivity and sealed walls, distinct reachable collectibles, complete action-by-action wins for all 12 mazes, shortest-walk values checked by an independent inventory-state breadth-first search, collisions, gate rules, repeated pickups, guide completion, daily reproducibility, invalid links, saved-data validation, wall-ray intersections, and sprite perspective.
+The **10 tests** cover connected sealed mazes, reachable distinct items, full action-by-action wins for all twelve nights, targets checked by an independent inventory-state search, collisions, gate rules, pickups, guidance, dates, saved data, ray intersections, and sprite perspective.
 
-## Compact-player walkthrough
+The game source does not require an account, remote API, advertising SDK, or external asset CDN. Records stay in browser storage; there is no cloud sync. Cloudflare may add its own hosting scripts and request logs. Optional synthesized audio follows browser sound permissions.
 
-![Ghostkeeper Maze 3D in a compact host iframe, with a first-person corridor, inventory and movement buttons](docs/images/mobile.jpg)
+## More moonlit adventures 🍬
 
-Use the four movement buttons to walk and turn. Check the inventory for three lantern spirits and a key; the gate opens only when all four objectives are complete. The map and ghost guide can help when the first-person corridor looks unfamiliar.
+- [Ghost Lanterns 3D](https://halloween-3d.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-3d) — Spatial Lights Out with linked lanterns.
+- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) — Number-sliding rooms with Moon Glides.
+- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) — Bring two mirrored ghosts home together.
+- [Midnight Rhythm Parade](https://halloween-rhythm-parade.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-rhythm-parade) — Three original songs, four rhythm lanes.
 
-*Actual interface captured in a browser iframe sized for the host player. This is a compact-window illustration, not a physical-phone test.*
+## Credits and a little support
 
-## Embedding and accessibility
+Created for **AshinTop’s Midnight Candy Club** through human-directed AI collaboration in design, programming, writing, testing, and review. The original artwork and synthesized sounds were made for this project. [Design notes](DESIGN.md) explain its intent.
 
-The actual iframe viewport drives the layout. Intended host sizes include **960 × 540**, **390 × 460**, **390 × 300**, and **844 × 340** CSS pixels. The large journal hides in smaller frames while the scene, inventory, map, hint, and four movement buttons remain accessible. See [EMBEDDING.md](EMBEDDING.md).
-
-```html
-<iframe src="https://halloween-haunted-maze.crazy3d.org/"
-  title="Ghostkeeper Maze 3D" width="960" height="540"
-  allow="fullscreen" allowfullscreen
-  style="display:block;width:100%;border:0"></iframe>
-```
-
-Reduced-motion mode removes smooth camera interpolation and decorative motion. High-level text, inventory counts and status messages accompany the scene. The game is a visual spatial puzzle; the Canvas world is not represented as a full screen-reader navigation interface.
-
-## Frequently asked questions
-
-**Is the maze scary?**  
-The atmosphere is moonlit and mysterious, with friendly ghosts. There are no enemies, jump scares, or chase mechanics.
-
-**Are all levels finishable?**  
-Yes. The generator makes connected mazes, and tests execute a complete winning action sequence for each campaign level. The daily maze uses the same connected construction.
-
-**Do I need WebGL?**  
-No. The perspective renderer uses Canvas 2D raycasting.
-
-**Does the daily maze change when I share it?**  
-No. A link such as `#daily=2026-10-31` keeps that date. Campaign links use `#night=1` through `#night=12`.
-
-## Creation credits
-
-Created for Ashin's Midnight Candy Club with AI-assisted game design, programming, documentation, testing, and review. Stone textures, ghost and lantern artwork, the perspective renderer, and short synthesized sounds were developed in code for this project. Screenshots and the captioned visual introduction use the actual interface; they do not imply a physical-device performance benchmark.
-
-## More from Midnight Candy Club
-
-- [Ghost Lanterns 3D](https://halloween-3d.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-3d) — a three-dimensional Lights Out garden with linked-soul lanterns.
-- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) — slide numbered tiles through a Halloween puzzle journey.
-- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) — solve two mirrored ghost paths together.
-- [Midnight Rhythm Parade](https://halloween-rhythm-parade.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-rhythm-parade) — play three original Halloween songs with four little monsters.
-
-If this little maze brightened your night, **[star the repository](https://github.com/AshinTop/halloween-haunted-maze)**. It helps you find the project again and supports future improvements. Reports with a level number, device, browser and reproduction steps are especially helpful.
+Enjoyed this little adventure? **[Star Ghostkeeper Maze 3D on GitHub](https://github.com/AshinTop/halloween-haunted-maze)** to save it for later and follow updates. Useful issue reports include the game mode or level, browser, window size, and steps that reproduce the problem. Explore the [complete Halloween collection](https://github.com/AshinTop/halloween-games).
